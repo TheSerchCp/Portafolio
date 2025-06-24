@@ -28,7 +28,7 @@
             </div>
         </div>
     </section>
-    <div class="w-full pb-[15rem]! px-0 grid grid-cols-6 gap-0">
+    <div class="w-full pb-[10rem]! px-0 grid grid-cols-6 gap-0">
         <!--Separador-->
         <div class="col-span-6 grid grid-cols-6">
             <div class="col-span-1">
@@ -43,7 +43,7 @@
             <!--Separador-->
         </div>
 
-        <div class="col-span-6 grid grid-cols-6 mb-[4.5rem]! pt-[10rem]">
+        <div class="col-span-6 grid grid-cols-6 mb-[4.5rem]! pt-[5rem]">
             <div class="col-span-4 mt-8! text-justify tracking-tight grid grid-cols-6">
                 <div class="col-span-6">
                     <p class="text-[16px] font-[SF Compact Rounded] font-medium! text-white ">
@@ -101,7 +101,7 @@
             </div>
         </div>
 
-        <div class="col-span-6 grid grid-cols-6 mb-[3rem] pt-[10rem]">
+        <div class="col-span-6 grid grid-cols-6 mb-[3rem] pt-[4rem]">
             <div
                 class="my-8! col-span-6 border-l-2 border-l-[#FF2E63] grid grid-cols-6  min-h-[28rem] transition-transform duration-200 ease-in-out">
                 <div class="col-span-1">
@@ -155,7 +155,7 @@
         </div>
     </div>
 
-    <div class="w-full pb- px-0 grid grid-cols-6 gap-0">
+    <div class="w-full pb-[2rem] px-0 grid grid-cols-6 gap-0">
         <!--Separador-->
         <div class="col-span-6 grid grid-cols-6 ">
             <div class="col-span-1">
@@ -170,8 +170,8 @@
         </div>
 
         <!--Separador-->
-        <div class="col-span-6 pt-[8rem] ">
-            <p class="font-medium text-[1rem] text-[#AACCEE] sm:pl-[5rem] lg:pl-[11.5rem] mt-8! w-[50rem] text-balance">
+        <div class="col-span-6 pt-[2rem] ">
+            <p class="font-medium text-[1rem] text-[#AACCEE] sm:pl-[5rem] lg:pl-[7rem] mt-8! w-[50rem] text-balance">
                 Conectemos y exploremos
                 oportunidades de colaboración. Estoy disponible para proyectos freelance, oportunidades de trabajo y
                 consultas técnicas.</p>
@@ -229,8 +229,8 @@
             </div>
         </div>
     </div>
-    <div class="w-full pb- px-0 grid grid-cols-6 gap-0">
-        <div class="col-span-6 flex justify-center items-center mt-[5rem]">
+    <div class="w-full px-0 grid grid-cols-6 gap-0">
+        <div class="col-span-6 flex justify-center items-center pt-[1rem]">
             <div class="flex border border-[#08D9D6] rounded-md w-3/4 h-[10rem] mt-[5rem]! bg-[#08D9D6]/5">
                 <div class="h-[3rem] w-[3rem] bg-[#08D9D6] m-[1rem]! rounded-md flex items-center justify-center">
                     <li class="pi pi-plus text-black text-[1.2rem]"></li>
