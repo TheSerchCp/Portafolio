@@ -6,7 +6,15 @@ const routes =  [
       path: '/',
       name: 'home',
       component: AppLayout,
-      children: []
+      children: [
+        //Rutas hijas del home, la vista AboutHome.vue se carga en el AppLayout
+        {
+          path: '',
+          name: 'about',
+          component: () => import('@/views/AboutHome.vue'),
+
+        }
+      ]
     },
   ];
 
