@@ -6,7 +6,7 @@
     </div>
     <div v-else class="min-h-screen overflow-x-hidden">
         <TopBar></TopBar>
-        <main class="w-full h-full pt-[22rem] ">
+        <main class="w-full h-full">
             <router-view></router-view>
         </main>
     </div>

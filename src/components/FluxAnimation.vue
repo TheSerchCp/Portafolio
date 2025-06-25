@@ -10,7 +10,7 @@ onMounted(() => {
         const config: FluxOptions = {
             container: canvasRef.value,
             count: 90,
-            color: '#08D9D6',
+            color: '#B5EAEA',
             size: { min: 2, max: 6, pulse: true, pulseSpeed: 0.03 },
             speed: { min: 0.1, max: 0.32, turbulence: 0.6 },
             opacity: { min: 0.4, max: 0.9, flicker: true },
