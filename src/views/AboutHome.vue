@@ -1,5 +1,5 @@
 <template>
-    <section class="min-h-screen flex items-center pt-16 overflow-visible">
+    <section id="inicio" class="min-h-screen flex items-center pt-16 overflow-visible">
         <div class="max-w-7xl mx-auto! px-4! sm:px-6! lg:px-8! py-20! overflow-visible">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-visible">
                 <!-- Added flex and items-center -->
@@ -20,7 +20,8 @@
                         </h2>
                         <div class="flex mt-[2rem]! gap-4">
                             <div
-                                class="bg-[#FF2E63] h-[2.5rem]! rounded-md flex justify-center items-center group hover:cursor-pointer hover:bg-[#FF2E63]/80 transition-colors duration-300">
+                                class="bg-[#FF2E63] h-[2.5rem]! rounded-md flex justify-center items-center group hover:cursor-pointer hover:bg-[#FF2E63]/80 transition-colors duration-300"
+                                @click="scrollToSection('acerca-de')">
                                 <div class="flex justify-center items-center gap-2 px-5 py-2!">
                                     <li class="pi pi-arrow-down animate-bounce text-white mx-2"></li>
                                     <p class="font-semibold! font-[SF Compact Rounded] text-white">Conoce más sobre mí
@@ -28,7 +29,8 @@
                                 </div>
                             </div>
                             <div
-                                class="border-1 border-cyan-400 h-[2.5rem]! rounded-md flex justify-center items-center group hover:cursor-pointer hover:bg-cyan-400/20 transition-colors duration-300">
+                                class="border-1 border-cyan-400 h-[2.5rem]! rounded-md flex justify-center items-center group hover:cursor-pointer hover:bg-cyan-400/20 transition-colors duration-300"
+                                @click="scrollToSection('proyectos')">
                                 <div class="flex justify-center items-center gap-2 px-5 py-2!">
                                     <li class="pi pi-external-link  text-cyan-400 mx-2"></li>
                                     <p class="font-semibold! font-[SF Compact Rounded] text-cyan-400">Ver mis proyectos
@@ -48,13 +50,13 @@
             </div>
         </div>
     </section>
-    <div  class="w-full pb-[4rem] lg:pb-[10rem]! p-0! grid grid-cols-1 lg:grid-cols-6 gap-12 bg-[#252A34]/50 px-4 sm:px-8! lg:px-16! justify-items-center">
+    <div id="acerca-de" class="w-full pt-20 lg:pt-24 pb-[4rem] lg:pb-[10rem]! p-0! grid grid-cols-1 lg:grid-cols-6 gap-12 bg-[#252A34]/50 px-4 sm:px-8! lg:px-16! justify-items-center">
         <!--Separador-->
         <div class="col-span-1 lg:col-span-6">
             <SectionTitle title="Acerca de mí" />
         </div>
 
-        <div class="col-span-1 lg:col-span-6 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mb-[4.5rem]! pt-[5rem]">
+        <div class="col-span-1 lg:col-span-6 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center mb-[4.5rem]! pt-[2rem] lg:pt-[5rem]">
             <!-- Left column with text -->
             <div class="w-full lg:w-1/2 mt-8! text-justify tracking-tight">
                 <div class="flex flex-col items-center lg:items-end">
@@ -120,13 +122,13 @@
         </div>
     </div>
 
-    <div class="w-full pb-[10rem] grid grid-cols-1 lg:grid-cols-6 gap-0 px-4 sm:px-8! lg:px-16!">
+    <div id="experiencia" class="w-full pt-20 lg:pt-24 pb-[10rem] grid grid-cols-1 lg:grid-cols-6 gap-0 px-4 sm:px-8! lg:px-16!">
         <!--Separador-->
         <div class="col-span-1 lg:col-span-6">
             <SectionTitle title="Experiencia" />
         </div>
 
-        <div class="col-span-1 lg:col-span-6 grid grid-cols-1 lg:grid-cols-6 mb-[3rem] pt-[4rem]">
+        <div class="col-span-1 lg:col-span-6 grid grid-cols-1 lg:grid-cols-6 mb-[3rem] pt-[2rem] lg:pt-[4rem]">
             <div v-for="(exp, index) in experiencia" :key="index"
                 class="my-8! col-span-1 lg:col-span-6 grid grid-cols-1 lg:grid-cols-6 justify-items-center! transition-transform duration-400 ease-in-out">
                 <div
@@ -161,13 +163,13 @@
         </div>
     </div>
 
-    <div class="w-full pb-[10rem] grid grid-cols-1 lg:grid-cols-6 gap-0 px-4 sm:px-8! lg:px-16!">
+    <div id="proyectos" class="w-full pt-20 lg:pt-24 pb-[10rem] grid grid-cols-1 lg:grid-cols-6 gap-0 px-4 sm:px-8! lg:px-16!">
         <!--Separador-->
         <div class="col-span-1 lg:col-span-6">
             <SectionTitle title="Proyectos" />
         </div>
 
-        <div class="col-span-1 lg:col-span-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mx-2 lg:mx-4! mt-8!">
+        <div class="col-span-1 lg:col-span-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mx-2 lg:mx-4! mt-4 lg:mt-8!">
             <div class="border-1 border-gray-600 rounded-md flex flex-col p-3 lg:p-4 hover:scale-103 hover:border-[#08D9D6] transition-transform duration-400 ease-in-out"
                 v-for="(project, index) in Proyectos" :key="index">
                 <div class="flex flex-col">
@@ -211,14 +213,14 @@
         </div>
     </div>
 
-    <div class="w-full grid grid-cols-1 lg:grid-cols-6 gap-0 px-4 sm:px-8! lg:px-16!">
+    <div id="contacto" class="w-full pt-20 lg:pt-24 pb-[4rem] lg:pb-[8rem] grid grid-cols-1 lg:grid-cols-6 gap-0 px-4 sm:px-8! lg:px-16!">
         <!--Separador-->
         <div class="col-span-1 lg:col-span-6">
             <SectionTitle title="Contacto" />
         </div>
 
         <!--Separador-->
-        <div class="col-span-1 lg:col-span-6 pt-[2rem]">
+        <div class="col-span-1 lg:col-span-6 pt-[1rem] lg:pt-[2rem]">
             <div class="grid grid-cols-1 lg:grid-cols-2 lg:justify-between gap-4 lg:gap-x-12! lg:gap-y-8 lg:gap-x-78">
                 <div
                     class="col-span-1 border-1 border-gray-600 bg-gray-800/50 backdrop-blur-lg! rounded-md p-4 lg:p-6! lg:p-8!">
@@ -526,5 +528,17 @@ const getStyleContactProjectButton = (index: number) => {
 const goToLink = (url: string) => {
     window.open(url, '_blank');
 };
+
+//Funcion local para scroll a secciones
+const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+};
+
 
 </script>

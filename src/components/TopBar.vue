@@ -1,34 +1,40 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
 
 const barItems = ref([
     {
         label: 'Acerca de',
         icon: 'pi pi-user',
-        to: '/'
+        sectionId: 'acerca-de'
     },
     {
         label: 'Experiencia',
         icon: 'pi pi-briefcase',
-        to: '/'
+        sectionId: 'experiencia'
     },
     {
         label: 'Proyectos',
         icon: 'pi pi-folder-open',
-        to: '/'
+        sectionId: 'proyectos'
     },
     {
         label: 'Contacto',
         icon: 'pi pi-comment',
-        to: '/'
+        sectionId: 'contacto'
     }
 ]);
 
-const goTo = (path: string) => {
-    router.push(path);
+//Funcion para navegar a las secciones usando smooth scroll con offset
+const navigateToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        const offset = 80; // Altura del navbar + margen
+        const elementPosition = element.offsetTop - offset;
+        window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+        });
+    }
 };
 
 //Logica para animcaion de aparicion
@@ -53,7 +59,7 @@ setTimeout(() => {
                 <!--Menu Desktop-->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <div v-for="(item, index) in barItems" :key="index" @click="goTo(item.to)"
+                        <div v-for="(item, index) in barItems" :key="index" @click="navigateToSection(item.sectionId)"
                             class="flex items-center px-3 py-2 cursor-pointer transition-transform duration-200 ease-in-out group">
                             <li class="pi"
                                 :class="item.icon + ' text-white text-2xl group-hover:text-[#FF2E63] transition transform ease-in duration-200'">
@@ -75,7 +81,7 @@ setTimeout(() => {
 
             <div v-if="isMenuOpen" class="md:hidden">
                 <div class="px-2 pt-2 pb-3 space-y-1  border-t border-gray-600 backdrop-blur-md! bg-white/4!">
-                    <div v-for="(item, index) in barItems" :key="index" @click="goTo(item.to)"
+                    <div v-for="(item, index) in barItems" :key="index" @click="navigateToSection(item.sectionId); isMenuOpen = false"
                         class="block px-3 py-2 cursor-pointer transition-transform duration-200 ease-in-out group">
                         <li class="pi"
                             :class="item.icon + ' text-white text-2xl group-hover:text-[#FF2E63] transition transform ease-in duration-200'">
