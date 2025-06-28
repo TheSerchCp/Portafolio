@@ -51,5 +51,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div ref="canvasRef" class="fixed inset-0 w-[25rem] h-[25rem]"></div>
+    <div class="w-full h-full rounded-2xl relative overflow-hidden" style="aspect-ratio: 2/1">
+        <div ref="canvasRef" class="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-1rem)] z-50"></div>
+    </div>    
 </template>
